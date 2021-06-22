@@ -1,0 +1,78 @@
+<div class="container-fluid bg">
+    <section class="row justify-content-center">
+        <section class="col-12 col-sm- col-md-3">
+            <form class="form-container">
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Insira seu CNPJ ou CPF</label>
+                    <input  [(ngModel)]="user.cpfOuCnpj" type="text" class="form-control" name="cpfOuCnpj" id="cpfOuCnpj" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Nome</label>
+                  <input [(ngModel)]="user.nomeFisOuJuri" type="text" class="form-control" name="nomeFisOuJuri" id="nomeFisOuJuri" placeholder="Digite seu nome ou Razão Social">
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Digite seu E-mail</label>
+                <input [(ngModel)]="user.email" type="text" class="form-control" name="email" id="email" placeholder="seu@email">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Insira um link de imagem para avatar</label>
+              <input [(ngModel)]="user.fotoUser" type="text" class="form-control" name="fotoUser" id="fotoUser" placeholder="link">
+          </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1" >Insira sua senha</label>
+                    <input (input)='confirmSenha($event)' type="password" class="form-control"  name="confirmSenha"  id="confirmSenha" placeholder="8 digitos">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Confirmação de senha</label>
+                    <input [(ngModel)]="user.senha" type="password" class="form-control" id="senha" name="senha"
+                        placeholder="Insira novamente sua senha">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Tipo de conta</label>
+                    <select (change)='cooperativaCadastro($event)' name="tipoCooperativa" id="tipoCooperativa" class="form-control">
+                        <option> </option>
+                        <option>Cooperativa</option>
+                        <option>Comprador</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Localidade</label>
+                    <select (change)='localidadeCadastro($event)' name="estadoLocalidade" class="form-control" id="estadoLocalidade">
+                        <option></option>
+                        <option>AC</option>
+                        <option>AL</option>
+                        <option>AP</option>
+                        <option>AM</option>
+                        <option>BA</option>
+                        <option>CE</option>
+                        <option>DF</option>
+                        <option>ES</option>
+                        <option>GO</option>
+                        <option>MA</option>
+                        <option>MT</option>
+                        <option>MS</option>
+                        <option>MG</option>
+                        <option>PA</option>
+                        <option>PB</option>
+                        <option>PR</option>
+                        <option>PE</option>
+                        <option>PI</option>
+                        <option>RJ</option>
+                        <option>RN</option>
+                        <option>RS</option>
+                        <option>RO</option>
+                        <option>RR</option>
+                        <option>SC</option>
+                        <option>SP</option>
+                        <option>SE</option>
+                        <option>TO</option>
+                    </select>
+                </div>
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-light mr-4" routerLink='/login'> Cancelar</button>
+                <button type="submit" class="btn btn-success" style="background-color: #2d6a4f" (click)="cadastrar()">Cadastrar</button>
+            </div>
+            </form>
+        </section>
+    </section>
+</div>

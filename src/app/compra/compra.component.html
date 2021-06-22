@@ -1,0 +1,29 @@
+<div class class="container-fluid bg pt-5">
+  <div class="wrapper">
+  <div class="product-img">
+    <img src="{{produto.fotoProduto}}" height="420" width="327">
+  </div>
+  <div class="product-info">
+    <div class="product-text">
+      <h1>{{produto.nomeProduto}}</h1>
+      <h2>Cadastrado por: {{produto.usuarios.nomeFisOuJuri}}</h2>
+      <p>{{produto.descricao}}</p>
+      <p>Quantidade disponível: {{produto.quantidade}}</p>
+      <p>Categoria: {{produto.tipo}}</p>
+      <p>Peso: {{produto.peso}}</p>
+
+      <p>R$ <span>{{produto.preco}}</span></p>
+    </div>
+    <div class="product-price-btn text-center">
+      <button (click)="compra()" type="button">Comprar</button>
+    </div>
+
+
+
+  </div>
+</div>
+<div class="wrapper2">
+  <a routerLink='/vitrine' class="goback">← Voltar para a vitrine de produtos</a>
+</div>
+
+
